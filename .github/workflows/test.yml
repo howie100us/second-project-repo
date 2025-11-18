@@ -1,18 +1,17 @@
 
 name: Test Application
-on: push # what action
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code #download code
-        uses: action/checkout@v3
+      - name: Get code
+        uses: actions/checkout@v4 # Updated to v4
       - name: Install NodeJS
-        uses: action/setup-node@v3 # not needed, this is just for practice
+        uses: actions/setup-node@v4 # Updated to v4
         with: 
           node-version: 24
-      - name: Install Dependicies    
+      - name: Install Dependencies
         run: npm ci
       - name: Run tests
-        run: npm test      
-
+        run: npm test
