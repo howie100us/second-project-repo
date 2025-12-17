@@ -1,6 +1,5 @@
 
-name: DeployApplication
-on: push
+name: DeployApplication # Updated the name to DeployApplication and triggered  workflow manually
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -16,7 +15,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:       
-    needs: test
+    needs: test. # test has to be successful before deploy can start
     runs-on: ubuntu-latest
     steps:
       - name: Get code
