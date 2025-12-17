@@ -1,5 +1,6 @@
 
-name: DeployApplication # Updated the name to DeployApplication and triggered  workflow manually
+name: DeployApplication
+on: [push, workflow_dispatch] # Triggered by push or manual dispatch
 jobs:
   test:
     runs-on: ubuntu-latest
