@@ -16,7 +16,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:       
-    needs: test. # test has to be successful before deploy can start
+    needs: test # test has to be successful before deploy can start
     runs-on: ubuntu-latest
     steps:
       - name: Get code
